@@ -9,7 +9,7 @@
 import Foundation
 
 class Animals {
-    var animals: [String] = ["dog", "cat", "snake", "pig", "chimpanzee", "rabbit"]
+    var animals: [String] = ["dog", "cat", "snake", "pig", "chimpanzee", "rabbit", "tiger"]
     
     
 }

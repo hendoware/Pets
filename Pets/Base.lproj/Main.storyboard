@@ -1,49 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="c7c-Nd-yhL">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
-        <scene sceneID="a8k-Od-9rK">
+        <!--Pets-->
+        <scene sceneID="dLv-t4-eqW">
             <objects>
-                <tableViewController id="DZ4-kq-7hx" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="dy2-3d-kuT">
+                <tableViewController id="rjb-h2-Us8" customClass="TableViewController" customModule="Pets" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ncl-8v-3LE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="h6w-Ze-tIn" style="IBUITableViewCellStyleDefault" id="mPA-5Q-u3W">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="pRW-er-a5z">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mPA-5Q-u3W" id="LCo-sS-pSM">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pRW-er-a5z" id="Xju-Y8-FeI">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="h6w-Ze-tIn">
-                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="mGX-Ok-e2q" kind="show" identifier="modify" id="dhK-qD-X9K"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="DZ4-kq-7hx" id="0VE-vT-Lyt"/>
-                            <outlet property="delegate" destination="DZ4-kq-7hx" id="Wza-mb-Xrr"/>
+                            <outlet property="dataSource" destination="rjb-h2-Us8" id="sjT-6G-qKj"/>
+                            <outlet property="delegate" destination="rjb-h2-Us8" id="ykh-ix-DFp"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Pets" id="dYc-mu-z5R">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="xAe-QB-bbY">
+                            <connections>
+                                <segue destination="mGX-Ok-e2q" kind="show" identifier="add" id="inD-om-pxN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tHs-Hq-7Xe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RUH-yC-YMB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14" y="113"/>
+            <point key="canvasLocation" x="872.79999999999995" y="216.34182908545728"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="hh5-Eq-rTS">
+            <objects>
+                <viewController id="mGX-Ok-e2q" customClass="DetailViewController" customModule="Pets" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kNf-ee-fdo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pet:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALu-wp-d2O">
+                                <rect key="frame" x="16" y="133" width="30" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="das-UM-Mec">
+                                <rect key="frame" x="83" y="128" width="276" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ygT-Xo-PPA">
+                                <rect key="frame" x="163" y="318" width="51" height="31"/>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ALu-wp-d2O" firstAttribute="leading" secondItem="kNf-ee-fdo" secondAttribute="leadingMargin" id="BZP-eL-w0T"/>
+                            <constraint firstItem="das-UM-Mec" firstAttribute="trailing" secondItem="kNf-ee-fdo" secondAttribute="trailingMargin" id="JbP-b8-M7P"/>
+                            <constraint firstItem="ygT-Xo-PPA" firstAttribute="centerX" secondItem="kNf-ee-fdo" secondAttribute="centerX" id="Qzz-Ha-lIa"/>
+                            <constraint firstItem="ALu-wp-d2O" firstAttribute="centerY" secondItem="das-UM-Mec" secondAttribute="centerY" id="cgB-Lz-5uz"/>
+                            <constraint firstItem="ygT-Xo-PPA" firstAttribute="centerY" secondItem="kNf-ee-fdo" secondAttribute="centerY" id="e1I-fb-4tX"/>
+                            <constraint firstItem="ALu-wp-d2O" firstAttribute="top" secondItem="kZu-Zu-ble" secondAttribute="top" constant="69" id="kYa-9S-f8N"/>
+                            <constraint firstItem="das-UM-Mec" firstAttribute="top" secondItem="kZu-Zu-ble" secondAttribute="top" constant="64" id="zIl-4u-ccO"/>
+                            <constraint firstItem="das-UM-Mec" firstAttribute="leading" secondItem="ALu-wp-d2O" secondAttribute="trailing" constant="37" id="zJO-a8-xOv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kZu-Zu-ble"/>
+                    </view>
+                    <connections>
+                        <outlet property="field" destination="das-UM-Mec" id="YBn-4l-0jp"/>
+                        <outlet property="want" destination="ygT-Xo-PPA" id="gEl-0z-L7z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egW-91-11S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837.5999999999999" y="215.44227886056973"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0sx-JW-GZM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c7c-Nd-yhL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CY3-0v-RmC">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rjb-h2-Us8" kind="relationship" relationship="rootViewController" id="WZd-8h-2wt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZR-c4-vXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66.400000000000006" y="216.34182908545728"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="inD-om-pxN"/>
+    </inferredMetricsTieBreakers>
 </document>

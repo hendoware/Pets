@@ -2,10 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../Pets/Base.lproj/Main.storyboard">
+      location = "group:/Users/seanhendrix/development/Pets/Pets/Main.storyboard">
    </FileRef>
    <FileRef
-      location = "group:../Pets/Base.lproj/LaunchScreen.storyboard">
+      location = "group:/Users/seanhendrix/development/Pets/Pets/LaunchScreen.storyboard">
    </FileRef>
    <FileRef
       location = "self:">

@@ -13,6 +13,8 @@
 		7B82BA982164426C00A32276 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82BA932164426C00A32276 /* AppDelegate.swift */; };
 		7B82BA992164426C00A32276 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82BA942164426C00A32276 /* TableViewController.swift */; };
 		7B82BA9A2164426C00A32276 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B82BA952164426C00A32276 /* Model.swift */; };
+		7BBBEEC22165B87A00B8AF13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBEEC12165B7C900B8AF13 /* Main.storyboard */; };
+		7BBBEEC32165B8B100B8AF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BBBEEC02165B7C700B8AF13 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,8 @@
 		7B82BA932164426C00A32276 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B82BA942164426C00A32276 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		7B82BA952164426C00A32276 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		7BBBEEBE2165AFF400B8AF13 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = /Users/seanhendrix/development/Pets/Pets/Base.lproj/Main.storyboard; sourceTree = "<absolute>"; };
-		7BBBEEBF2165AFF400B8AF13 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/seanhendrix/development/Pets/Pets/Base.lproj/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
+		7BBBEEC02165B7C700B8AF13 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = /Users/seanhendrix/development/Pets/Pets/LaunchScreen.storyboard; sourceTree = "<absolute>"; };
+		7BBBEEC12165B7C900B8AF13 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Main.storyboard; path = /Users/seanhendrix/development/Pets/Pets/Main.storyboard; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,8 @@
 		7B349401215F0E57008E3F5A /* Pets */ = {
 			isa = PBXGroup;
 			children = (
-				7BBBEEBE2165AFF400B8AF13 /* Main.storyboard */,
-				7BBBEEBF2165AFF400B8AF13 /* LaunchScreen.storyboard */,
+				7BBBEEC02165B7C700B8AF13 /* LaunchScreen.storyboard */,
+				7BBBEEC12165B7C900B8AF13 /* Main.storyboard */,
 				7B349409215F0E58008E3F5A /* Assets.xcassets */,
 				7B34940E215F0E58008E3F5A /* Info.plist */,
 				7B82BA932164426C00A32276 /* AppDelegate.swift */,
@@ -129,7 +131,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BBBEEC32165B8B100B8AF13 /* LaunchScreen.storyboard in Resources */,
 				7B34940A215F0E58008E3F5A /* Assets.xcassets in Resources */,
+				7BBBEEC22165B87A00B8AF13 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
